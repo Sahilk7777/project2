@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Palindrome</title>
+	<style type="text/css">
+		.output{
+			font-weight: bolder;
+			color: orangered;
+		}
+		div{
+			height: 400px;
+			width: 600px;
+			margin-left: 30%;
+
+		}
+		.bt{
+			
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<form>
+			<fieldset>
+				<legend align="center">PALINDROME</legend>
+				<br><br>
+				<label>Enter a number :</label><br>
+				<input type="text" name="number" id="num" required>
+				<br><br>
+				<input type="button" name="validation" value="CHECK" onclick="palindrome()" class="bt">
+				<br>
+				<p id="op" class="output"></p>
+			</fieldset>
+		</form>
+	</div>
+	<script type="text/javascript">
+		let op = document.getElementById("op");
+		function palindrome() {
+			let num = document.getElementById("num").value;
+			let rev = num.split('').reverse().join('');
+			if(num==rev){
+				op.innerHTML =` The number ${num} is a Palindrome`;
+			}else{
+				op.innerHTML =` The number ${num} is not a Palindrome`;
+			}
+		}
+	</script>
+</body>
+</html>
